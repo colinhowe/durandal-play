@@ -1,0 +1,21 @@
+﻿<div>
+    <h1>Channel Selector Example</h1>
+    <div data-bind="channelSelector:{owner: inboxController}">
+    </div>
+
+    <div data-bind="channelSelector:{owner: inboxController}">
+        <div data-part="footer">
+            Overriding part of a widget..
+        </div>
+    </div>
+
+    <!-- This might even be done in another widget, e.g. data view -->
+    <p>Selected channels</p>
+    <table>
+        <tbody data-bind="foreach: inboxController.selectedChannels">
+            <tr>
+                <td data-bind="text: $data"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
